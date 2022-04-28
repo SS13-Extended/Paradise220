@@ -471,6 +471,7 @@ GLOBAL_LIST_INIT(default_medbay_channels, list(
 	tcm.verbage = verbage
 	// Now put that through the stuff
 	var/handled = FALSE
+	playsound(loc,'sound/voice/walkietalkie.ogg',40,1)
 	if(connection)
 		for(var/obj/machinery/tcomms/core/C in GLOB.tcomms_machines)
 			if(C.handle_message(tcm))

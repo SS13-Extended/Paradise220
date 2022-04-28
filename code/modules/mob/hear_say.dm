@@ -217,6 +217,7 @@
 			to_chat(src, "<span class='warning'>You feel your headset vibrate but can hear nothing from it!</span>")
 	else
 		to_chat(src, "[part_a][track || speaker_name][part_b][message]</span></span>")
+		playsound(loc,'sound/voice/radio_chatter.ogg',40,0)
 		if(client?.prefs.toggles2 & PREFTOGGLE_2_RUNECHAT)
 			create_chat_message(speaker, message_clean, TRUE, FALSE)
 		if(src != speaker || isrobot(src) || isAI(src))

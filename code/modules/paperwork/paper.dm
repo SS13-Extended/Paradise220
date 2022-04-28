@@ -302,6 +302,7 @@
 	item_write.on_write(src,usr)
 
 	show_content(usr, forceshow = 1, infolinks = 1)
+	playsound(loc,'sound/effects/PEN_Ball_Point_Pen_Circling_01_mono.ogg',30,1)
 
 	update_icon()
 

@@ -7,7 +7,8 @@
 	to corporate operations. IPCs (Integrated Positronic Chassis) are a loose category of self-willed robots with a humanoid form, \
 	generally self-owned after being 'born' into servitude; they are reliable and dedicated workers, albeit more than slightly \
 	inhuman in outlook and perspective."
-
+	speech_sounds = list('sound/voice/compbeep1.ogg','sound/voice/compbeep2.ogg','sound/voice/compbeep3.ogg','sound/voice/compbeep4.ogg')
+	speech_chance = 30
 	icobase = 'icons/mob/human_races/r_machine.dmi'
 	deform = 'icons/mob/human_races/r_machine.dmi'
 	language = "Trinary"

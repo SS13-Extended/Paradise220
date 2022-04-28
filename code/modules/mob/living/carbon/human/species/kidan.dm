@@ -4,6 +4,8 @@
 	icobase = 'icons/mob/human_races/r_kidan.dmi'
 	deform = 'icons/mob/human_races/r_def_kidan.dmi'
 	language = "Chittin"
+	speech_sounds = 'sound/voice/Bug.ogg'
+	speech_chance = 20
 	unarmed_type = /datum/unarmed_attack/claws
 
 	brute_mod = 0.8
