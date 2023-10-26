@@ -440,3 +440,5 @@ span.body .coderesponses {color: #FF0000;}
 
 /* Examine styles */
 .examine {border: 1px solid #000000; padding: 5px; margin: 2px 10px; background: #D3D3D3;}
+
+.tgsmsg {padding: 6px 12px; margin: 2px 10px; font-weight: bold; border-radius: 4px; background: #D3D3D3;}
