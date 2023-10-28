@@ -56,6 +56,7 @@
 
 
 /mob/proc/say_dead(message)
+	message = handleDiscordEmojis(message)
 	if(client)
 		if(!client.holder)
 			if(!CONFIG_GET(flag/dsay_allowed))
