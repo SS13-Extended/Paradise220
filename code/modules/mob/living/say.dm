@@ -234,6 +234,7 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 		S.speaking.broadcast(src, S.message)
 		return 1
 
+	say_emphasis_all(message_pieces)
 
 	if(!LAZYLEN(message_pieces))
 		log_runtime(EXCEPTION("Message failed to generate pieces. [message] - [json_encode(message_pieces)]"))
@@ -468,6 +469,8 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 	var/italics = 1
 	var/adverb_added = FALSE
 	var/not_heard //the message displayed to people who could not hear the whispering
+
+	say_emphasis_all(message_pieces)
 
 	var/datum/multilingual_say_piece/first_piece = message_pieces[1]
 	if(first_piece.speaking)

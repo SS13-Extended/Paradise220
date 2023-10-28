@@ -54,6 +54,9 @@
 		input = sanitize(copytext_char(input(src,"Choose an emote to display.") as text|null,1,MAX_MESSAGE_LEN))
 	else
 		input = message
+
+	input = say_emphasis(input)
+
 	if(input)
 		message = "<B>[src]</B> [input]"
 	else
@@ -76,6 +79,8 @@
 				continue
 
 			if(findtext(message, " snores.")) //Because we have so many sleeping people.
+				break
+			if(findtext(message, " храпит.")) //Because we have so many sleeping people.
 				break
 
 			if(isobserver(M) && M.get_preference(PREFTOGGLE_CHAT_GHOSTSIGHT) && !(M in viewers(src, null)) && client) // The client check makes sure people with ghost sight don't get spammed by simple mobs emoting.
