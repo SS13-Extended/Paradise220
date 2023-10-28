@@ -51,12 +51,6 @@ GLOBAL_VAR_INIT(admin_ooc_colour, "#b82e00")
 			log_admin("[key_name_log(src)] has attempted to advertise in OOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
 			return
-		if(findtext(msg, "https://") || findtext(msg, "http://"))
-			if(!findtext(msg, "ss220.space"))
-				to_chat(src, "<B>Advertising other sites is not allowed.</B>")
-				log_admin("[key_name_log(src)] has attempted to advertise in OOC: [msg]")
-				message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
-				return
 
 	add_ooc_logs(src, msg)
 
@@ -213,12 +207,6 @@ GLOBAL_VAR_INIT(admin_ooc_colour, "#b82e00")
 			log_admin("[key_name_log(src)] has attempted to advertise in LOOC: [msg]")
 			message_admins("[key_name_admin(src)] has attempted to advertise in LOOC: [msg]")
 			return
-		if(findtext(msg, "https://") || findtext(msg, "http://"))
-			if(!findtext(msg, "ss220.space"))
-				to_chat(src, "<B>Advertising other sites is not allowed.</B>")
-				log_admin("[key_name_log(src)] has attempted to advertise in OOC: [msg]")
-				message_admins("[key_name_admin(src)] has attempted to advertise in OOC: [msg]")
-				return
 
 	add_ooc_logs(src, msg, TRUE)
 
