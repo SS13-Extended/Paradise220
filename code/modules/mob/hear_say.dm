@@ -177,7 +177,7 @@
 			if(rgb[i] > 96) rgb[i] -= 97
 			if(rgb[i] > 64) rgb[i] -= 65
 			if(rgb[i] > 31) rgb[i] -= 32
-			rgb[i] = rgb[i]*4 + 63 // base brightness
+			rgb[i] = min(rgb[i]*4 + 83, 255) // base brightness
 
 		speaker.chat_color = rgb(rgb[1],rgb[2],rgb[3])
 		speaker.chat_color_darkened = rgb(rgb[1]-23,rgb[2]-23,rgb[3]-23)
