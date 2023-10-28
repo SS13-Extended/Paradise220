@@ -2138,7 +2138,7 @@ GLOBAL_LIST_INIT(special_role_times, list( //minimum age (in days) for accounts 
 									return
 								if(limb == "head")
 									ha_style = "None"
-									alt_head = null
+									alt_head = "None"
 									h_style = GLOB.hair_styles_public_list["Bald"]
 									f_style = GLOB.facial_hair_styles_list["Shaved"]
 									m_styles["head"] = "None"
