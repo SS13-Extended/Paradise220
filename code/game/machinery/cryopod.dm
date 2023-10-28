@@ -784,7 +784,11 @@
 	return ..()
 
 
-/proc/cryo_ssd(var/mob/living/carbon/person_to_cryo)
+/proc/cryo_ssd(var/mob/living/carbon/person_to_cryo, force = FALSE)
+	if (!force)
+		log_admin("Something was trying to the cryo [person_to_cryo]")
+		return 0
+	log_admin("Putting [person_to_cryo] to the cryo")
 	if(istype(person_to_cryo.loc, /obj/machinery/cryopod))
 		return 0
 	if(isobj(person_to_cryo.loc))
@@ -811,7 +815,9 @@
 			return 1
 	return 0
 
-/proc/force_cryo_human(var/mob/living/carbon/person_to_cryo)
+/proc/force_cryo_human(var/mob/living/carbon/person_to_cryo, force = FALSE)
+	if (!force)
+		return
 	if(!istype(person_to_cryo))
 		return
 	if(!istype(person_to_cryo.loc, /obj/machinery/cryopod))

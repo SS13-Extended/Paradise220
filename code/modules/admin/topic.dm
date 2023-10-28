@@ -2269,7 +2269,7 @@
 			P.despawn_occupant()
 			log_admin("[key_name(usr)] despawned [H.job] [H] in cryo.")
 			message_admins("[key_name_admin(usr)] despawned [H.job] [H] in cryo.")
-		else if(cryo_ssd(H))
+		else if(cryo_ssd(H, TRUE))
 			log_admin("[key_name(usr)] sent [H.job] [H] to cryo.")
 			message_admins("[key_name_admin(usr)] sent [H.job] [H] to cryo.")
 			if(href_list["cryoafk"]) // Warn them if they are send to storage and are AFK
