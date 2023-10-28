@@ -222,11 +222,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		Morgue.update()
 
 	// If mob in cryopod, despawn mob
+	// No, mob will despawn when cryo decides it to despawn
+	/*
 	if(P)
 		if(!P.control_computer)
 			P.find_control_computer(urgent=1)
 		if(P.control_computer)
 			P.despawn_occupant()
+	*/
 	return
 
 // Ghosts have no momentum, being massless ectoplasm
