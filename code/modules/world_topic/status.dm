@@ -31,6 +31,7 @@
 	status_info["players"] = player_count
 	status_info["admins"] = admin_count
 	status_info["map_name"] = SSmapping.map_datum ? SSmapping.map_datum.name : "Unknown"
+	status_info["gameid"] = GLOB.round_id || "NULL"
 
 	if(SSticker)
 		status_info["ticker_state"] = SSticker.current_state
