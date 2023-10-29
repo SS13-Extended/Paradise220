@@ -81727,8 +81727,7 @@
 /area/maintenance/asmaint2)
 "qKZ" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /turf/simulated/floor/engine/vacuum,
 /area/toxins/mixing)
