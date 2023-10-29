@@ -107,4 +107,4 @@ span.body .coderesponses {color: #FF3333;}
 
 /* .examineinfo			{color: #b6c5ff;} */
 
-.tgsmsg {padding: 6px 12px; margin: 2px 10px; font-weight: bold; border-radius: 4px; background: #252525; color: #FFFFFF; }
+.tgsmsg {padding: 6px 12px; margin: 2px 10px; border: 1px solid #e769a4; font-weight: bold; border-radius: 4px; background: #252525; color: #FFFFFF; }
