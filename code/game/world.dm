@@ -231,11 +231,9 @@ GLOBAL_LIST_EMPTY(world_topic_handlers)
 		s += "<br>[CONFIG_GET(string/server_tag_line)]"
 
 	if(SSticker && ROUND_TIME > 0)
-		s += "<br>[ROUND_TIME_TEXT()], " + capitalize(get_security_level())
+		s += "<br>&gt; [ROUND_TIME_TEXT()], " + capitalize(get_security_level())
 	else
-		s += "<br><b>STARTING</b>"
-
-	s += "<br>"
+		s += "<br>&gt; <b>STARTING</b>"
 
 	if(config && CONFIG_GET(string/discordurl))
 		s += "<br>&gt; <a href=\"[CONFIG_GET(string/discordurl)]\">Join Discord</a>"
