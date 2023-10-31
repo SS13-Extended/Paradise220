@@ -199,6 +199,7 @@
 	allow_duplicates = FALSE
 	cost = 10
 
+/*
 /datum/map_template/ruin/lavaland/swarmer_boss
 	name = "Crashed Shuttle"
 	id = "swarmerboss"
@@ -206,6 +207,7 @@
 	suffix = "lavaland_surface_swarmer_crash.dmm"
 	allow_duplicates = FALSE
 	cost = 20
+*/
 
 /datum/map_template/ruin/lavaland/miningripley
 	name = "Ripley"
