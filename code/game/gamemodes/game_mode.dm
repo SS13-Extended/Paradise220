@@ -280,7 +280,7 @@
 
 	var/gameid = GLOB.round_id || "NULL"
 	var/mapname = SSmapping.map_datum ? SSmapping.map_datum.name : "Unknown"
-	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "## Раунд [capitalize(name)]-[gameid] завершился!\n- Карта: `[mapname]`\n- Длительность раунда: `[ROUND_TIME_TEXT()]`\n- Длительность смены: `[SHIFT_TIME_TEXT()]`\n- [surviving_total] выживших / [escaped_total] эвакуировавшихся\n- [ghosts] призраков\n<@&[CONFIG_GET(string/pingas_round_down)]>")
+	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "## Раунд [capitalize(name)]-[gameid] завершился!\n- Карта: `[mapname]`\n- Длительность раунда: `[ROUND_TIME_TEXT()]`\n- Длительность смены: `[SHIFT_TIME_TEXT()]`\n- Выживших: [surviving_total] / Эвакуировавшихся: [escaped_total]\n- Призраков: [ghosts]\n<@&[CONFIG_GET(string/pingas_round_down)]>")
 	return FALSE
 
 
