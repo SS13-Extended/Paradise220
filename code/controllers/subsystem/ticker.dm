@@ -99,6 +99,7 @@ SUBSYSTEM_DEF(ticker)
 			to_chat(world, "Please, setup your character and select ready. Game will start in [CONFIG_GET(number/pregame_timestart)] seconds")
 			current_state = GAME_STATE_PREGAME
 			fire() // TG says this is a good idea
+			INVOKE_ASYNC(src, PROC_REF(announce_discord_round_start))
 			for(var/mob/new_player/N in GLOB.player_list)
 				if (N.client)
 					N.new_player_panel_proc() // to enable the observe option
@@ -577,6 +578,14 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/IsRoundInProgress()
 	return current_state == GAME_STATE_PLAYING
 
+/datum/controller/subsystem/ticker/proc/announce_discord_round_start()
+	SSdiscord.send2discord_simple(
+		DISCORD_WEBHOOK_PRIMARY,
+		"## Начинается новый раунд!\n"+
+		"- Номер раунда: `[GLOB.round_id || "NULL"]`\n"+
+		"- До начала: [round((round_start_time - world.time)/10)]с\n"+
+		"<@![CONFIG_GET(string/pingas_round_up)]>"
+	)
 
 /datum/controller/subsystem/ticker/proc/setup_news_feeds()
 	var/datum/feed_channel/newChannel = new /datum/feed_channel

@@ -662,3 +662,11 @@
 	if(.)
 		GLOB.abandon_allowed = config_entry_value
 
+/datum/config_entry/string/pingas_new_player
+	default = "546691230910644224"
+
+/datum/config_entry/string/pingas_round_up
+	default = "1168838888240984105"
+
+/datum/config_entry/string/pingas_round_down
+	default = "1168841676740104323"
