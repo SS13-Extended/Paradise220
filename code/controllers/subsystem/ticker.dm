@@ -579,7 +579,9 @@ SUBSYSTEM_DEF(ticker)
 	return current_state == GAME_STATE_PLAYING
 
 /datum/controller/subsystem/ticker/proc/announce_discord_round_start()
-	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "## Начинается новый раунд!\n- Номер раунда: `[GLOB.round_id || "NULL"]`\n- До начала: [round((round_start_time - world.time)/10)]с\n<@&[CONFIG_GET(string/pingas_round_up)]>")
+	var/gameid = GLOB.round_id || "NULL"
+	var/mapname = SSmapping.map_datum ? SSmapping.map_datum.name : "Unknown"
+	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "## Начинается новый раунд!\n- Номер раунда: `[gameid]`\n- Карта: `[mapname]`\n- До начала: [round((round_start_time - world.time)/10)]с\n<@&[CONFIG_GET(string/pingas_round_up)]>")
 
 /datum/controller/subsystem/ticker/proc/setup_news_feeds()
 	var/datum/feed_channel/newChannel = new /datum/feed_channel
