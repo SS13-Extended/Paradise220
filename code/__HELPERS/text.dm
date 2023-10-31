@@ -940,7 +940,9 @@ var/global/list/discordEmojis = list(
 	for (var/i = 1, i <= length(listmsg), i++)
 		var/word = listmsg[i]
 		for (var/emojiName in discordEmojis)
+			if (length(emojiName) != length(word))
+				continue
 			var/emojiId = discordEmojis[emojiName]
-			word = replacetext_char(word, emojiName, "<img src=\"https://cdn.discordapp.com/emojis/[emojiId]?size=32&quality=lossless\" style=\"height: 32px; width: 32px;\" />")
+			word = replacetext_char(lowertext(word), emojiName, "<img src=\"https://cdn.discordapp.com/emojis/[emojiId]?size=32&quality=lossless\" style=\"height: 32px; width: 32px;\" />")
 		newMsg += word
 	return jointext(newMsg, " ")
