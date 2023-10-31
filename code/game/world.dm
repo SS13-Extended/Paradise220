@@ -225,9 +225,7 @@ GLOBAL_LIST_EMPTY(world_topic_handlers)
 
 	if(config && CONFIG_GET(string/servername))
 		s += "<b>[CONFIG_GET(string/servername)]</b> &#8212; "
-	s += "<b>[station_name()]</b> "
-	if(config && CONFIG_GET(string/githuburl))
-		s+= "([GLOB.game_version])"
+	s += "<b>[station_name()]</b>]"
 
 	if(config && CONFIG_GET(string/server_tag_line))
 		s += "<br>[CONFIG_GET(string/server_tag_line)]"
@@ -238,25 +236,12 @@ GLOBAL_LIST_EMPTY(world_topic_handlers)
 		s += "<br><b>STARTING</b>"
 
 	s += "<br>"
-	var/list/features = list()
 
-	if(!GLOB.enter_allowed)
-		features += "closed"
-
-	if(config && CONFIG_GET(string/server_extra_features))
-		features += CONFIG_GET(string/server_extra_features)
-
-	if(config && CONFIG_GET(flag/allow_vote_mode))
-		features += "vote"
+	if(config && CONFIG_GET(string/discordurl))
+		s += "<br>&gt; <a href=\"[CONFIG_GET(string/discordurl)]\">Join Discord</a>"
 
 	if(config && CONFIG_GET(string/wikiurl))
-		features += "<a href=\"[CONFIG_GET(string/wikiurl)]\">Wiki</a>"
-
-	if(GLOB.abandon_allowed)
-		features += "respawn"
-
-	if(features)
-		s += "[jointext(features, ", ")]"
+		s += "<br>&gt; <a href=\"[CONFIG_GET(string/wikiurl)]\">Open Wiki</a>"
 
 	return s
 
