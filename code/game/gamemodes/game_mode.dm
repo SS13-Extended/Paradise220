@@ -278,7 +278,7 @@
 	if(escaped_on_pod_5)
 		SSblackbox.record_feedback("nested tally", "round_end_stats", escaped_on_pod_5, list("escapees", "on_pod_5"))
 
-	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "## Раунд [name]-[GLOB.round_id || "NULL"] завершился!\n- Длительность раунда: `[ROUND_TIME_TEXT()]`\n- Длительность смены: `[SHIFT_TIME_TEXT()]`\n- [surviving_total] выживших / [escaped_total] эвакуировавшихся\n- [ghosts] призраков\n<@![CONFIG_GET(string/pingas_round_down)]>")
+	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "## Раунд [name]-[GLOB.round_id || "NULL"] завершился!\n- Длительность раунда: `[ROUND_TIME_TEXT()]`\n- Длительность смены: `[SHIFT_TIME_TEXT()]`\n- [surviving_total] выживших / [escaped_total] эвакуировавшихся\n- [ghosts] призраков\n<@&[CONFIG_GET(string/pingas_round_down)]>")
 	return FALSE
 
 
