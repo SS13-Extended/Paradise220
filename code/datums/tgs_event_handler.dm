@@ -20,7 +20,7 @@
 			message_admins("TGS: Deployment failed!")
 		if(TGS_EVENT_DEPLOYMENT_COMPLETE)
 			message_admins("TGS: Deployment complete!")
-			to_chat(world, "<div class='tgsmsg'>Server updated, changes will be applied on the next round...</div>")
+			to_chat(world, "<div class='tgsmsg'>Сервер обновился, изменения будут применены в следующем раунде...</div>")
 		if(TGS_EVENT_WATCHDOG_DETACH)
 			message_admins("TGS restarting...")
 			reattach_timer = addtimer(CALLBACK(src, PROC_REF(LateOnReattach)), 1 MINUTES)
