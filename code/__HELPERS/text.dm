@@ -939,10 +939,14 @@ var/global/list/discordEmojis = list(
 	var/list/listmsg = splittext_char(msg, " ")
 	for (var/i = 1, i <= length(listmsg), i++)
 		var/word = listmsg[i]
+		// Весь этот костыль с length и copytext_char нужен только потому что
+		// lowertext(word) == lowertext(emojiName) не работает вообще по какой-то причине
 		for (var/emojiName in discordEmojis)
 			if (length(emojiName) != length(word))
 				continue
 			var/emojiId = discordEmojis[emojiName]
-			word = replacetext_char(lowertext(word), emojiName, "<img src=\"https://cdn.discordapp.com/emojis/[emojiId]?size=32&quality=lossless\" style=\"height: 32px; width: 32px;\" />")
+			word = replacetext_char(word, emojiName, "<img src=\"https://cdn.discordapp.com/emojis/[emojiId]?size=32&quality=lossless\" style=\"height: 32px; width: 32px;\" />")
+			if (copytext_char(word, 1, 2) == "<")
+				word = lowertext(word)
 		newMsg += word
 	return jointext(newMsg, " ")
