@@ -127,7 +127,6 @@
 		// Now they have accepted TOS, we can log data
 		client.chatOutput.sendClientData()
 		new_player_panel_proc()
-		SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "<a:pepecrab:1102732573945385070> <@[CONFIG_GET(string/pingas_new_player)]> <a:pepecrab:1102732573945385070>\nИгрок `[ckey]` присоединился впервые!\nЗарегистрирован в BYOND [client.byondacc_age]д назад.")
 	if(href_list["consent_rejected"])
 		client.tos_consent = FALSE
 		to_chat(usr, "<span class='warning'>You must consent to the terms of service before you can join!</span>")
