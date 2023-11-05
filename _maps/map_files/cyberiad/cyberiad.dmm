@@ -18098,7 +18098,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/window/eastleft{
 	name = "Hydroponics Desk";
-	req_access = list(35)
+	req_access = list(35,28)
 	},
 /obj/machinery/door/window/northleft{
 	dir = 8;
@@ -25136,16 +25136,7 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/obj/structure/table,
-/obj/item/book/manual/sop_service{
-	pixel_x = -6;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/food/condiment/enzyme{
-	layer = 5;
-	pixel_x = 11;
-	pixel_y = 5
-	},
+/obj/machinery/processor,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -25944,8 +25935,24 @@
 /turf/simulated/floor/wood/fancy/cherry,
 /area/crew_quarters/bar/atrium)
 "boq" = (
-/obj/structure/table,
-/obj/item/reagent_containers/glass/beaker/large{
+/obj/structure/table/reinforced,
+/obj/machinery/door/poddoor/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "open";
+	id_tag = "kitchenbar";
+	name = "Kitchen Shutters";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/window/eastleft{
+	base_state = "right";
+	icon_state = "right";
+	name = "Kitchen";
+	req_access = list(28)
+	},
+/obj/item/storage/box/donkpockets{
+	pixel_x = 2;
 	pixel_y = 3
 	},
 /turf/simulated/floor/plasteel{
@@ -26588,7 +26595,7 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/mrchangs)
 "bpS" = (
-/obj/machinery/kitchen_machine/candy_maker,
+/obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -26882,11 +26889,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/freezer/kitchen,
 /obj/structure/extinguisher_cabinet{
 	name = "north extinguisher cabinet";
 	pixel_y = 30
 	},
+/obj/machinery/vending/dinnerware,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -27860,16 +27867,16 @@
 	},
 /area/crew_quarters/bar)
 "btK" = (
-/obj/effect/decal/warning_stripes/white,
-/obj/machinery/kitchen_machine/oven{
-	pixel_y = 3
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/kitchen_machine/oven{
+	pixel_y = 3
+	},
+/obj/effect/decal/warning_stripes/white,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -28050,6 +28057,7 @@
 "bur" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/hologram/holopad,
+/obj/effect/landmark/start/chef,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -28093,7 +28101,7 @@
 /obj/machinery/door/window/eastleft{
 	dir = 1;
 	name = "Hydroponics Desk";
-	req_access = list(35)
+	req_access = list(35,28)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -28848,7 +28856,11 @@
 	},
 /area/hallway/primary/central/ne)
 "bwn" = (
-/obj/machinery/cooker/deepfryer,
+/obj/machinery/kitchen_machine/grill{
+	pixel_x = 1;
+	pixel_y = 2
+	},
+/obj/effect/decal/warning_stripes/white,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -29501,7 +29513,11 @@
 	req_access = list(28)
 	},
 /obj/machinery/light,
-/obj/machinery/processor,
+/obj/machinery/button/windowtint{
+	id = "kitchen";
+	pixel_x = 1;
+	pixel_y = -32
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -30198,26 +30214,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/wood/fancy/cherry,
 /area/crew_quarters/bar/atrium)
-"bzg" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "open";
-	id_tag = "kitchenhall";
-	name = "Kitchen Shutters";
-	opacity = 0
-	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/window/westleft{
-	dir = 1;
-	name = "Kitchen";
-	req_access = list(28)
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "cafeteria"
-	},
-/area/crew_quarters/kitchen)
 "bzh" = (
 /obj/effect/spawner/window/reinforced/polarized{
 	id = "garden"
@@ -70338,11 +70334,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint)
 "dwW" = (
-/obj/structure/table,
-/obj/machinery/kitchen_machine/microwave{
-	pixel_x = -1;
-	pixel_y = 7
-	},
+/obj/machinery/cooker/deepfryer,
+/obj/effect/decal/warning_stripes/white,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -70881,11 +70874,10 @@
 	},
 /area/medical/research/restroom)
 "eiI" = (
-/obj/effect/decal/warning_stripes/white,
-/obj/machinery/kitchen_machine/grill{
-	pixel_x = 1;
-	pixel_y = 2
+/obj/machinery/kitchen_machine/oven{
+	pixel_y = 3
 	},
+/obj/effect/decal/warning_stripes/white,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -71042,16 +71034,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/table,
-/obj/item/storage/box/donkpockets{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/reagent_containers/glass/beaker{
-	pixel_x = 5
-	},
 /obj/structure/sign/poster/official/fruit_bowl{
 	pixel_y = 32
+	},
+/obj/machinery/icemachine{
+	pixel_x = -1;
+	pixel_y = -3
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
@@ -71229,7 +71217,7 @@
 	name = "Toxins Test Room Interior";
 	req_access = list(7)
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "eBm" = (
 /obj/effect/decal/cleanable/dust,
@@ -71774,7 +71762,7 @@
 /area/crew_quarters/dorms)
 "ffi" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "ffU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -73425,10 +73413,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/camera{
 	c_tag = "Kitchen"
 	},
+/obj/machinery/kitchen_machine/candy_maker,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -73590,7 +73578,6 @@
 /turf/simulated/floor/transparent/glass/reinforced,
 /area/maintenance/livingcomplex)
 "hjl" = (
-/obj/machinery/vending/dinnerware,
 /obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 1;
@@ -73600,6 +73587,10 @@
 /obj/machinery/light_switch{
 	name = "west light switch";
 	pixel_x = -24
+	},
+/obj/structure/table,
+/obj/machinery/processor{
+	pixel_y = 7
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
@@ -74365,6 +74356,7 @@
 /area/toxins/xenobiology)
 "imN" = (
 /obj/machinery/smartfridge,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/plating,
 /area/crew_quarters/kitchen)
 "ina" = (
@@ -74432,7 +74424,7 @@
 	},
 /obj/machinery/door/airlock{
 	name = "Hydroponics";
-	req_access = list(35)
+	req_access = list(35,28)
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plasteel{
@@ -75188,6 +75180,7 @@
 /area/hydroponics)
 "jgB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/landmark/start/chef,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -76135,13 +76128,9 @@
 /area/maintenance/livingcomplex)
 "kli" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/condiment/peppermill{
-	pixel_x = 4;
-	pixel_y = 6
-	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
-	pixel_x = -4;
-	pixel_y = 6
+/obj/machinery/reagentgrinder{
+	pixel_x = -1;
+	pixel_y = 9
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
@@ -76355,7 +76344,7 @@
 	frequency = 1222;
 	id_tag = "toxins_mixing_interior"
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "kxm" = (
 /obj/structure/sign/botany,
@@ -76880,8 +76869,8 @@
 /area/medical/patients_rooms)
 "lhW" = (
 /obj/structure/closet{
-	desc = "It's a storage unit for foodservice garments.";
 	custom_door_overlay = "black";
+	desc = "It's a storage unit for foodservice garments.";
 	name = "chef's closet"
 	},
 /obj/item/storage/belt/chef,
@@ -77376,11 +77365,15 @@
 	},
 /area/security/permabrig)
 "lGW" = (
-/obj/machinery/reagentgrinder{
-	pixel_x = -1;
-	pixel_y = 9
-	},
 /obj/structure/table,
+/obj/item/reagent_containers/food/condiment/peppermill{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/reagent_containers/food/condiment/saltshaker{
+	pixel_x = -4;
+	pixel_y = 6
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -77716,7 +77709,7 @@
 /obj/effect/decal/remains/mouse{
 	name = "Джерри"
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "mbq" = (
 /obj/structure/disposalpipe/segment,
@@ -78087,6 +78080,9 @@
 	},
 /area/mimeoffice)
 "msc" = (
+/obj/machinery/atmospherics/unary/passive_vent{
+	dir = 8
+	},
 /obj/machinery/sparker{
 	dir = 4;
 	id = "toxinsigniter";
@@ -78101,10 +78097,7 @@
 	pixel_y = 8;
 	req_access = list(7)
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber{
-	dir = 8
-	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "mta" = (
 /obj/item/shard{
@@ -78767,8 +78760,8 @@
 /area/toxins/xenobiology)
 "njX" = (
 /obj/structure/table,
-/obj/item/stack/packageWrap{
-	pixel_y = 4
+/obj/item/reagent_containers/food/drinks/bottle/cream{
+	pixel_y = 8
 	},
 /obj/item/stack/packageWrap{
 	pixel_y = 1
@@ -78795,10 +78788,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/asmaint2)
 "nmo" = (
-/obj/effect/decal/warning_stripes/white,
-/obj/machinery/kitchen_machine/oven{
-	pixel_y = 3
+/obj/structure/table,
+/obj/machinery/kitchen_machine/microwave{
+	pixel_x = -1;
+	pixel_y = 7
 	},
+/obj/effect/decal/warning_stripes/white,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -80411,7 +80406,7 @@
 	name = "Toxins Test Room Exterior";
 	req_access = list(7)
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "psL" = (
 /obj/effect/decal/warning_stripes/north,
@@ -80439,7 +80434,7 @@
 	id = "toxinsigniter";
 	pixel_x = -32
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "pvX" = (
 /obj/machinery/vending/autodrobe,
@@ -81727,9 +81722,10 @@
 /area/maintenance/asmaint2)
 "qKZ" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 9
+	dir = 9;
+	icon_state = "intact"
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "qLM" = (
 /obj/item/lighter/random,
@@ -81929,7 +81925,7 @@
 	},
 /area/hydroponics)
 "qUR" = (
-/obj/effect/landmark/start/chef,
+/obj/structure/table,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -82523,7 +82519,7 @@
 	id_tag = "tox_airlock_sensor";
 	pixel_y = 24
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "rFJ" = (
 /obj/structure/cable/yellow,
@@ -83042,7 +83038,7 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "sqy" = (
 /obj/machinery/light,
@@ -83816,7 +83812,7 @@
 /area/toxins/mixing)
 "teX" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "thj" = (
 /turf/simulated/floor/plasteel{
@@ -84776,25 +84772,10 @@
 	},
 /area/maintenance/livingcomplex)
 "uwX" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "open";
-	id_tag = "kitchenhall";
-	name = "Kitchen Shutters";
-	opacity = 0
+/obj/effect/spawner/window/reinforced/polarized{
+	id = "kitchen"
 	},
-/obj/machinery/door/firedoor,
-/obj/machinery/door/window/westleft{
-	dir = 1;
-	name = "Kitchen";
-	req_access = list(28)
-	},
-/obj/item/storage/fancy/donut_box,
-/turf/simulated/floor/plasteel{
-	icon_state = "cafeteria"
-	},
+/turf/simulated/floor/plating,
 /area/crew_quarters/kitchen)
 "uyv" = (
 /obj/machinery/kitchen_machine/grill,
@@ -85742,7 +85723,7 @@
 	tag_exterior_door = "tox_airlock_exterior";
 	tag_interior_door = "tox_airlock_interior"
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "vDD" = (
 /obj/structure/table/reinforced,
@@ -86373,10 +86354,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/icemachine{
-	pixel_x = -1;
-	pixel_y = -3
-	},
+/obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
 	},
@@ -87206,17 +87184,11 @@
 /area/maintenance/apmaint)
 "xgD" = (
 /obj/structure/table,
-/obj/item/kitchen/rollingpin{
-	pixel_x = 3
-	},
 /obj/item/kitchen/knife{
 	pixel_x = -8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/item/kitchen/rollingpin{
+	pixel_x = 2
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
@@ -87423,7 +87395,7 @@
 	name = "Toxins Venting Bay Door";
 	use_power = 0
 	},
-/turf/simulated/floor/engine/vacuum,
+/turf/simulated/floor/engine,
 /area/toxins/mixing)
 "xui" = (
 /obj/docking_port/stationary{
@@ -87835,8 +87807,17 @@
 /area/crew_quarters/dorms)
 "xVC" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/drinks/bottle/cream{
-	pixel_y = 8
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_y = 3
+	},
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/food/condiment/enzyme{
+	layer = 5;
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "cafeteria"
@@ -124704,7 +124685,7 @@ dkR
 bdT
 tAk
 waE
-waE
+boq
 waE
 pnB
 tbq
@@ -125217,12 +125198,12 @@ boN
 odR
 bdT
 xAD
-njX
-boq
+bof
+bof
+bof
+bof
+bof
 kli
-bof
-bof
-bof
 uwX
 bAk
 bHy
@@ -125476,11 +125457,11 @@ bdT
 hfe
 eiI
 qUR
-eiI
+nmo
+bwn
 bof
-dwW
-bof
-bzg
+lGW
+uwX
 bAk
 bHy
 bAk
@@ -125735,9 +125716,9 @@ btI
 bur
 jgB
 byE
-bwn
 bof
-bzg
+njX
+uwX
 bAk
 bHy
 bAk
@@ -125991,10 +125972,10 @@ bof
 btK
 qUR
 nmo
-bof
 dwW
 bof
-bzg
+xgD
+uwX
 bAk
 bHy
 bAk
@@ -126245,13 +126226,13 @@ boV
 bdT
 esq
 bof
-xgD
-boq
+btM
+bof
+bof
+bof
+bof
 xVC
-bof
-bof
-bof
-bzg
+uwX
 bAk
 bHy
 bAk
@@ -126506,7 +126487,7 @@ btM
 bof
 bof
 bof
-lGW
+bof
 bxJ
 bdT
 nHF
