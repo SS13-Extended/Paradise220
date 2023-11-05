@@ -238,8 +238,8 @@ GLOBAL_LIST_EMPTY(world_topic_handlers)
 	if(config && CONFIG_GET(string/discordurl))
 		s += "<br>&gt; <a href=\"[CONFIG_GET(string/discordurl)]\">Join Discord</a>"
 
-	if(config && CONFIG_GET(string/wikiurl))
-		s += "<br>&gt; <a href=\"[CONFIG_GET(string/wikiurl)]\">Open Wiki</a>"
+	// if(config && CONFIG_GET(string/wikiurl))
+	// 	s += "<br>&gt; <a href=\"[CONFIG_GET(string/wikiurl)]\">Open Wiki</a>"
 
 	return s
 
