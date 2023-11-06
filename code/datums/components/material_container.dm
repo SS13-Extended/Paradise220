@@ -57,13 +57,20 @@
 			if(amt)
 				examine_list += "<span class='notice'>It has [amt] units of [lowertext(M.name)] stored.</span>"
 
-/datum/component/material_container/proc/OnAttackBy(datum/source, obj/item/I, mob/living/user)
+/datum/component/material_container/proc/OnAttackBy(datum/source, obj/item/I, mob/living/user, silent=FALSE)
 	var/list/tc = allowed_typecache
 	if(disable_attackby)
 		return
 	if(user.a_intent != INTENT_HELP)
 		return
 	if(I.flags & ABSTRACT)
+		return
+	if (istype(I, /obj/item/storage/bag/trash))
+		var/obj/item/storage/bag/trash/trashbag = I
+		for(var/obj/item/item as anything in trashbag.contents)
+			if (istype(item))
+				OnAttackBy(source, item, user, TRUE)
+		to_chat(user, "<span class='notice'>You empty \the [trashbag] contents into \the [parent].</span>")
 		return
 	if((I.flags_2 & (HOLOGRAM_2 | NO_MAT_REDEMPTION_2)) || (tc && !is_type_in_typecache(I, tc)))
 		to_chat(user, "<span class='warning'>[parent] won't accept [I]!</span>")
@@ -74,10 +81,12 @@
 		return
 	var/material_amount = get_item_material_amount(I)
 	if(!material_amount)
-		to_chat(user, "<span class='warning'>[I] does not contain sufficient amounts of metal or glass to be accepted by [parent].</span>")
+		if (!silent)
+			to_chat(user, "<span class='warning'>[I] does not contain sufficient amounts of metal or glass to be accepted by [parent].</span>")
 		return
 	if(!has_space(material_amount))
-		to_chat(user, "<span class='warning'>[parent] is full. Please remove metal or glass from [parent] in order to insert more.</span>")
+		if (!silent)
+			to_chat(user, "<span class='warning'>[parent] is full. Please remove metal or glass from [parent] in order to insert more.</span>")
 		return
 	user_insert(I, user)
 
