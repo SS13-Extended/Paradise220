@@ -82,7 +82,8 @@
 		if (!iscarbon(M) && !issilicon(M))
 			continue
 
-		active_with_role["Any"]++
+		if (M.mind.assigned_role in GLOB.station_positions)
+			active_with_role["Any"]++
 
 		if(istype(M, /mob/living/silicon/robot))
 			var/mob/living/silicon/robot/R = M

@@ -112,6 +112,10 @@ GLOBAL_LIST_INIT(whitelisted_positions, list(
 	"Security Pod Pilot",
 ))
 
+GLOBAL_LIST_INIT(station_positions, (
+	command_positions | engineering_positions | medical_positions | additional_medical_positions | science_positions | security_positions | technically_security_positions | support_positions | supply_positions | service_positions | civilian_positions | nonhuman_positions | whitelisted_positions
+))
+
 
 /proc/guest_jobbans(var/job)
 	return (job in GLOB.whitelisted_positions)
