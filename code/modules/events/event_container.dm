@@ -173,7 +173,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Спам на КПК",           /datum/event/pda_spam,                  0,  list(ASSIGNMENT_ANY = 4),    FALSE,  25,   50),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Денежная лотерея",      /datum/event/money_lotto,               0,  list(ASSIGNMENT_ANY = 2),     TRUE,   0,   15),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Взлом аккаунта",        /datum/event/money_hacker,              0,  list(ASSIGNMENT_ANY = 4),     TRUE,   0,   25),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Новости экономики",     /datum/event/economic_event             0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  300),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Новости экономики",     /datum/event/economic_event,             0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  300),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скудные новости",       /datum/event/trivial_news,              0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  400),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Обычные новости",       /datum/event/mundane_news,              0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  300),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Нашествие вредителей",  /datum/event/infestation,               0,  list(ASSIGNMENT_JANITOR = 200)),
@@ -242,7 +242,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Метеорный вал",	/datum/event/meteor_wave,		0,						list(ASSIGNMENT_ENGINEER =  10),	TRUE, 0, 40),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Визит абдукторов",/datum/event/abductor, 		    0, 						list(ASSIGNMENT_SECURITY =  3),		TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Пауки Ужаса",		/datum/event/spider_terror, 	0,						list(ASSIGNMENT_SECURITY =	4),		TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Демон Резни",		/datum/event/spawn_slaughter,	0,  list(ASSIGNMENT_SECURITY = 3), = TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Демон Резни",		/datum/event/spawn_slaughter,	0,						list(ASSIGNMENT_SECURITY = 3),		TRUE),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Floor Cluwne",	/datum/event/spawn_floor_cluwne,	15, is_one_shot = TRUE)
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, 		"Космический Дракон", 		/datum/event/space_dragon, 				0, 		list(ASSIGNMENT_SECURITY = 6), TRUE),
 		new /datum/event_meta/alien(EVENT_LEVEL_MAJOR,	"Заражение ксеноморфами",	/datum/event/alien_infestation, 		0,		list(ASSIGNMENT_SECURITY = 6), TRUE),
