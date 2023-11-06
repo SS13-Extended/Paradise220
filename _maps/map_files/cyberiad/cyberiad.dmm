@@ -39036,7 +39036,7 @@
 /area/assembly/robotics)
 "bUI" = (
 /turf/simulated/floor/plasteel{
-	icon_state = "whitepurplecorner"
+	icon_state = "whitebluecorner"
 	},
 /area/medical/genetics)
 "bUJ" = (
@@ -39049,7 +39049,7 @@
 	pixel_x = 27
 	},
 /turf/simulated/floor/plasteel{
-	icon_state = "whitepurplecorner"
+	icon_state = "whitebluecorner"
 	},
 /area/medical/genetics)
 "bUK" = (
@@ -39607,7 +39607,7 @@
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
-	icon_state = "whitepurplecorner"
+	icon_state = "whitebluecorner"
 	},
 /area/medical/genetics)
 "bVV" = (
@@ -39645,7 +39645,7 @@
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
-	icon_state = "whitepurplecorner"
+	icon_state = "whitebluecorner"
 	},
 /area/medical/genetics)
 "bVX" = (
@@ -39666,7 +39666,7 @@
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
-	icon_state = "whitepurplecorner"
+	icon_state = "whitebluecorner"
 	},
 /area/medical/genetics)
 "bVY" = (
@@ -39701,7 +39701,7 @@
 	},
 /turf/simulated/floor/plasteel{
 	dir = 1;
-	icon_state = "whitepurplecorner"
+	icon_state = "whitebluecorner"
 	},
 /area/medical/genetics)
 "bWa" = (
@@ -40265,7 +40265,7 @@
 /obj/machinery/disposal,
 /turf/simulated/floor/plasteel{
 	dir = 8;
-	icon_state = "whitepurple"
+	icon_state = "whiteblue"
 	},
 /area/medical/genetics)
 "bXt" = (
@@ -40306,7 +40306,7 @@
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
-	icon_state = "whitepurple"
+	icon_state = "whiteblue"
 	},
 /area/medical/genetics)
 "bXw" = (
@@ -40592,7 +40592,7 @@
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
-	icon_state = "whitepurple"
+	icon_state = "whiteblue"
 	},
 /area/medical/genetics)
 "bXW" = (
@@ -40733,7 +40733,7 @@
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
-	icon_state = "whitepurple"
+	icon_state = "whiteblue"
 	},
 /area/medical/genetics)
 "bYl" = (
@@ -41339,8 +41339,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "whitepurplefull"
+	icon_state = "whitebluefull"
 	},
 /area/medical/genetics)
 "bZC" = (
@@ -42181,15 +42180,14 @@
 /obj/effect/landmark/start/geneticist,
 /turf/simulated/floor/plasteel{
 	dir = 10;
-	icon_state = "whitepurple"
+	icon_state = "whiteblue"
 	},
 /area/medical/genetics)
 "caX" = (
 /obj/machinery/computer/scan_consolenew,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "whitepurplefull"
+	icon_state = "whitebluefull"
 	},
 /area/medical/genetics)
 "caY" = (
@@ -42199,7 +42197,7 @@
 /obj/effect/landmark/start/geneticist,
 /turf/simulated/floor/plasteel{
 	dir = 6;
-	icon_state = "whitepurple"
+	icon_state = "whiteblue"
 	},
 /area/medical/genetics)
 "caZ" = (
@@ -42211,8 +42209,7 @@
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "whitepurplefull"
+	icon_state = "whitebluefull"
 	},
 /area/medical/genetics)
 "cbc" = (
@@ -43132,7 +43129,7 @@
 "ccQ" = (
 /turf/simulated/floor/plasteel{
 	dir = 8;
-	icon_state = "whitepurple"
+	icon_state = "whiteblue"
 	},
 /area/medical/genetics)
 "ccR" = (
