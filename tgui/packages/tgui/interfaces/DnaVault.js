@@ -81,41 +81,52 @@ const GeneTherapySelection = (props, context) => {
   } = data;
   return (
     <Section title="Personal Gene Therapy">
-      <Box
-        bold
-        textAlign="center"
-        mb={1}>
-        Applicable Gene Therapy Treatments
-      </Box>
       {(!used && (
-        <Grid>
-          <Grid.Column>
-            <Button
-              fluid
-              bold
-              content={choiceA}
-              textAlign="center"
-              onClick={() => act('gene', {
-                choice: choiceA,
-              })} />
-          </Grid.Column>
-          <Grid.Column>
-            <Button
-              fluid
-              bold
-              content={choiceB}
-              textAlign="center"
-              onClick={() => act('gene', {
-                choice: choiceB,
-              })} />
-          </Grid.Column>
-        </Grid>
+        <Box>
+          <Box
+            bold
+            textAlign="center"
+            mb={1}>
+            Applicable Gene Therapy Treatments
+          </Box>
+          <Grid>
+            <Grid.Column>
+              <Button
+                fluid
+                bold
+                content={choiceA}
+                textAlign="center"
+                onClick={() => act('gene', {
+                  choice: choiceA,
+                })} />
+            </Grid.Column>
+            <Grid.Column>
+              <Button
+                fluid
+                bold
+                content={choiceB}
+                textAlign="center"
+                onClick={() => act('gene', {
+                  choice: choiceB,
+                })} />
+            </Grid.Column>
+          </Grid>
+        </Box>
       )) || (
-        <Box
-          bold
-          textAlign="center"
-          mb={1}>
-          Users DNA deemed unstable. Unable to provide more upgrades.
+        <Box>
+          <Box
+            bold
+            textAlign="center"
+            mb={1}>
+            Users DNA deemed unstable. Unable to provide more upgrades.
+          </Box>
+          <Button
+            fluid
+            bold
+            textAlign="center"
+            onClick={() => act('reapply')}>
+            Reapply {choiceA}
+          </Button>
         </Box>
       )}
     </Section>

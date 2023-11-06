@@ -229,13 +229,13 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 		ui.open()
 
 /obj/machinery/dna_vault/proc/roll_powers(mob/user)
-	if(user in power_lottery)
+	if(!user.mind || (user.mind in power_lottery))
 		return
 	var/list/L = list()
 	var/list/possible_powers = list(VAULT_TOXIN, VAULT_NOBREATH, VAULT_FIREPROOF, VAULT_STUNTIME, VAULT_ARMOUR, VAULT_SPEED, VAULT_QUICK)
 	L += pick_n_take(possible_powers)
 	L += pick_n_take(possible_powers)
-	power_lottery[user] = L
+	power_lottery[user.mind] = L
 
 /obj/machinery/dna_vault/ui_data(mob/user)
 	var/list/data = list(
@@ -250,14 +250,15 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 		"choiceA" = "",
 		"choiceB" = ""
 	)
-	if(user && completed)
-		var/list/L = power_lottery[user]
-		if(length(L))
+	if(user.mind && completed)
+		var/list/L = power_lottery[user.mind]
+		if(islist(L) && length(L))
 			data["used"] = FALSE
 			data["choiceA"] = L[1]
 			data["choiceB"] = L[2]
-		else if(L)
+		else if(istext(L))
 			data["used"] = TRUE
+			data["choiceA"] = L
 	return data
 
 /obj/machinery/dna_vault/ui_act(action, params)
@@ -267,6 +268,12 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 	switch(action)
 		if("gene")
 			upgrade(usr, params["choice"])
+			return TRUE
+		if("reapply")
+			var/datum/mind/mind = usr.mind
+			if (!mind)
+				return FALSE
+			upgrade(usr, power_lottery[mind])
 			return TRUE
 
 /obj/machinery/dna_vault/proc/check_goal()
@@ -296,7 +303,11 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 		return ..()
 
 /obj/machinery/dna_vault/proc/upgrade(mob/living/carbon/human/H, upgrade_type)
-	if(!(upgrade_type in power_lottery[H]))
+	if (!upgrade_type)
+		return
+	if (!H.mind)
+		return
+	if(!(upgrade_type in power_lottery[H.mind]) && (power_lottery[H.mind] != upgrade_type))
 		return
 	if(!completed)
 		return
@@ -317,22 +328,22 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 			S.species_traits |= NO_BREATHE
 		if(VAULT_FIREPROOF)
 			to_chat(H, "<span class='notice'>You feel fireproof.</span>")
-			S.burn_mod *= 0.5
+			S.burn_mod = 0.5
 			S.species_traits |= RESISTHOT
 		if(VAULT_STUNTIME)
 			to_chat(H, "<span class='notice'>Nothing can keep you down for long.</span>")
-			S.stun_mod *= 0.5
-			S.stamina_mod *= 0.5
-			H.stam_regen_start_modifier *= 0.5
+			S.stun_mod = 0.5
+			S.stamina_mod = 0.5
+			H.stam_regen_start_modifier = 0.5
 		if(VAULT_ARMOUR)
 			to_chat(H, "<span class='notice'>You feel tough.</span>")
-			S.brute_mod *= 0.7
-			S.burn_mod *= 0.7
-			S.tox_mod *= 0.7
-			S.oxy_mod *= 0.7
-			S.clone_mod *= 0.7
-			S.brain_mod *= 0.7
-			S.stamina_mod *= 0.7
+			S.brute_mod = 0.7
+			S.burn_mod = 0.7
+			S.tox_mod = 0.7
+			S.oxy_mod = 0.7
+			S.clone_mod = 0.7
+			S.brain_mod = 0.7
+			S.stamina_mod = 0.7
 			S.species_traits |= PIERCEIMMUNE
 		if(VAULT_SPEED)
 			to_chat(H, "<span class='notice'>You feel very fast and agile.</span>")
@@ -340,7 +351,7 @@ GLOBAL_LIST_INIT(non_simple_animals, typecacheof(list(/mob/living/carbon/human/l
 		if(VAULT_QUICK)
 			to_chat(H, "<span class='notice'>Your arms move as fast as lightning.</span>")
 			H.next_move_modifier = 0.5
-	power_lottery[H] = list()
+	power_lottery[H.mind] = upgrade_type
 
 #undef VAULT_TOXIN
 #undef VAULT_NOBREATH
