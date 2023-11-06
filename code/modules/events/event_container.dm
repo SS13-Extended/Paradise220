@@ -163,11 +163,12 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 	next_event = EM
 	return EM
 
+#define MUNDANE_NOTHING 1100
 /datum/event_container/mundane
 	severity = EVENT_LEVEL_MUNDANE
 	available_events = list(
 		// Severity level, event name, event type, base weight, role weights, one shot, min weight, max weight. Last two only used if set.
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Ничего",                /datum/event/nothing,                1100),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Ничего",                /datum/event/nothing,                	0,  list(ASSIGNMENT_ANY = MUNDANE_NOTHING), FALSE,   0, MUNDANE_NOTHING),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Сознание",              /datum/event/sentience,                 0),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Спам на КПК",           /datum/event/pda_spam,                  0,  list(ASSIGNMENT_ANY = 4),    FALSE,  25,   50),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Денежная лотерея",      /datum/event/money_lotto,               0,  list(ASSIGNMENT_ANY = 2),     TRUE,   0,   15),
@@ -180,11 +181,13 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скопление кои",         /datum/event/carp_migration/koi,		0,  list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_SECURITY = 50), 0, 100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Аппендицит",            /datum/event/spontaneous_appendicitis, 	0,  list(ASSIGNMENT_MEDICAL = 10), TRUE),
 	)
+#undef MUNDANE_NOTHING
 
+#define MODERATE_NOTHING 1230
 /datum/event_container/moderate
 	severity = EVENT_LEVEL_MODERATE
 	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ничего",					/datum/event/nothing,					1230),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ничего",					/datum/event/nothing,					0,		list(ASSIGNMENT_ANY = MODERATE_NOTHING), FALSE, 0, MODERATE_NOTHING),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Скопление карпов",			/datum/event/carp_migration,			0, 		list(ASSIGNMENT_ENGINEER = 40, ASSIGNMENT_SECURITY = 80), TRUE, 0, 400),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Сбойные дроны",			/datum/event/rogue_drone, 				0,		list(ASSIGNMENT_SECURITY = 20)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Космолоза",				/datum/event/spacevine, 				0,		list(ASSIGNMENT_ENGINEER = 30), FALSE, 0, 200),
@@ -225,11 +228,13 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Космический ниндзя",		/datum/event/space_ninja, 				0,		list(ASSIGNMENT_SECURITY = 10), TRUE, 0, 70),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Торговцы",					/datum/event/traders,					0,      list(ASSIGNMENT_ANY = 20), TRUE),
 	)
+#undef MODERATE_NOTHING
 
+#define MAJOR_NOTHING 590
 /datum/event_container/major
 	severity = EVENT_LEVEL_MAJOR
 	available_events = list(
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Ничего",			/datum/event/nothing,			590),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Ничего",			/datum/event/nothing,			0,						list(ASSIGNMENT_ANY = MAJOR_NOTHING), FALSE, 0, MAJOR_NOTHING),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Миграция карпов",	/datum/event/carp_migration,	0,						list(ASSIGNMENT_SECURITY =  5), 	TRUE),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station,	0,			list(ASSIGNMENT_ANY = 5)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Перегрузка ЛКП",	/datum/event/apc_overload,		0,						list(ASSIGNMENT_ENGINEER =  2), 	FALSE),
@@ -242,6 +247,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, 		"Космический Дракон", 		/datum/event/space_dragon, 				0, 		list(ASSIGNMENT_SECURITY = 6), TRUE),
 		new /datum/event_meta/alien(EVENT_LEVEL_MAJOR,	"Заражение ксеноморфами",	/datum/event/alien_infestation, 		0,		list(ASSIGNMENT_SECURITY = 6), TRUE),
 	)
+#undef MAJOR_NOTHING
 
 
 #undef ASSIGNMENT_ANY
