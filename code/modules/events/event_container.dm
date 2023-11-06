@@ -167,18 +167,18 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 	severity = EVENT_LEVEL_MUNDANE
 	available_events = list(
 		// Severity level, event name, event type, base weight, role weights, one shot, min weight, max weight. Last two only used if set.
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Ничего",				/datum/event/nothing,			1100),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Спам на КПК",			/datum/event/pda_spam, 			0, 		list(ASSIGNMENT_ANY = 4), FALSE, 25, 50),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Денежная лотерея",		/datum/event/money_lotto, 		0, 		list(ASSIGNMENT_ANY = 1), TRUE, 5,  15),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Взлом аккаунта",		/datum/event/money_hacker, 		0, 		list(ASSIGNMENT_ANY = 4), TRUE, 10, 25),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Новости экономики",		/datum/event/economic_event,	300),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скудные новости",		/datum/event/trivial_news, 		400),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Обычные новости", 		/datum/event/mundane_news, 		300),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Нашествие вредителей",	/datum/event/infestation, 		100,	list(ASSIGNMENT_JANITOR = 100)),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Сознание",				/datum/event/sentience,			50),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Стенной грибок",		/datum/event/wallrot, 			0,		list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50)),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скопление кои",			/datum/event/carp_migration/koi,		80,),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Аппендицит", 			/datum/event/spontaneous_appendicitis, 	0,		list(ASSIGNMENT_MEDICAL = 10), TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Ничего",                /datum/event/nothing,                1100),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Сознание",              /datum/event/sentience,                 0),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Спам на КПК",           /datum/event/pda_spam,                  0,  list(ASSIGNMENT_ANY = 4),    FALSE,  25,   50),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Денежная лотерея",      /datum/event/money_lotto,               0,  list(ASSIGNMENT_ANY = 2),     TRUE,   0,   15),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Взлом аккаунта",        /datum/event/money_hacker,              0,  list(ASSIGNMENT_ANY = 4),     TRUE,   0,   25),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Новости экономики",     /datum/event/economic_event             0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  300),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скудные новости",       /datum/event/trivial_news,              0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  400),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Обычные новости",       /datum/event/mundane_news,              0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  300),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Нашествие вредителей",  /datum/event/infestation,               0,  list(ASSIGNMENT_JANITOR = 200)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Стенной грибок",        /datum/event/wallrot,                   0,  list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50)),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скопление кои",         /datum/event/carp_migration/koi,		0,  list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_SECURITY = 50), 0, 100),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Аппендицит",            /datum/event/spontaneous_appendicitis, 	0,  list(ASSIGNMENT_MEDICAL = 10), TRUE),
 	)
 
 /datum/event_container/moderate
