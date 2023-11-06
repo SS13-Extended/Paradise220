@@ -294,7 +294,7 @@
 			if(GLOB.admin_ranks.len)
 				new_rank = input("Выберите стандартный ранг или создайте новый", "Выбор ранга", null, null) as null|anything in (GLOB.admin_ranks|"*Новый Ранг*")
 			else
-				new_rank = input("Выберите стандартный ранг или создайте новый", "Выбор ранга", null, null) as null|anything in list("Старший Админ", "Админ", "Триал Админ", "Модератор", "Ментор", "*Новый Ранг*")
+				new_rank = input("Выберите стандартный ранг или создайте новый", "Выбор ранга", null, null) as null|anything in list("Старший Админ", "Админ", "Триал Админ", "Модератор", "Ментор", "Protect Staff", "*Новый Ранг*")
 
 			var/rights = 0
 			if(D)

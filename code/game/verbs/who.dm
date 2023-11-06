@@ -135,4 +135,5 @@
 	msg = replacetext(msg, "\[Триал Админ\]",	"\[<font color='#cfc000'>Триал Админ</font>\]")
 	msg = replacetext(msg, "\[Модератор\]",	"\[<font color='#9db430'>Модератор</font>\]")
 	msg = replacetext(msg, "\[Ментор\]",	"\[<font color='#67761e'>Ментор</font>\]")
+	msg = replacetext(msg, "\[Protect Staff\]",	"\[<font color='#7cc218'>Protect Staff</font>\]")
 	to_chat(src, msg)
