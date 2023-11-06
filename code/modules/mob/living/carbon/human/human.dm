@@ -1908,6 +1908,8 @@ Eyes need to have significantly high darksight to shine unless the mob has the X
 /mob/living/carbon/human/adjust_nutrition(change)
 	if(NO_HUNGER in dna.species.species_traits)
 		return FALSE
+	if (nutrition < (NUTRITION_LEVEL_STARVING + 15) && IsSleeping())
+		return FALSE
 	return ..()
 
 /mob/living/carbon/human/set_nutrition(change)

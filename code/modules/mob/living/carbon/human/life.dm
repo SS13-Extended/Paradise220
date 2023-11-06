@@ -654,7 +654,7 @@
 				becomeFat()
 
 		// nutrition decrease
-		if(nutrition >= 0 && stat != DEAD)
+		if(nutrition >= 0 && stat != DEAD && !istype(src.loc, /obj/machinery/cryopod))
 			handle_nutrition_alerts()
 			// THEY HUNGER
 			var/hunger_rate = hunger_drain
