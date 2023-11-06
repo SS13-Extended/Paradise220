@@ -68,8 +68,6 @@
 		/obj/item/grown/bananapeel/bluespace = 60,
 		/obj/item/seeds/random/labelled = 60,
 		/obj/item/soap/syndie = 20,
-		/obj/structure/toilet/golden_toilet,
-		/obj/structure/toilet/bluespace,
 		/obj/item/storage/wallet/color,
 		/obj/item/id_decal/prisoner,
 		/obj/item/id_decal/silver,
@@ -105,7 +103,7 @@
 		/obj/vehicle/space/speedbike/red = 10,
 		/obj/vehicle/space/speedbike = 10,
 		/obj/vehicle/car,
-	
+
 		//Toys
 		/obj/item/toy/syndicateballoon = 5,
 		/obj/item/gun/projectile/automatic/c20r/toy,
@@ -188,16 +186,8 @@
 		/obj/item/clothing/head/blob,
 
 		// Magic items
-		/obj/structure/closet/crate/necropolis/tendril = 10,
-		/obj/item/spellbook/oneuse/fireball,
 		/obj/item/spellbook/oneuse/smoke,
-		/obj/item/spellbook/oneuse/blind,
-		/obj/item/spellbook/oneuse/forcewall,
-		/obj/item/spellbook/oneuse/knock,
-		/obj/item/spellbook/oneuse/charge,
-		/obj/item/spellbook/oneuse/summonitem,
 		/obj/item/spellbook/oneuse/fake_gib,
-		/obj/item/spellbook/oneuse/sacredflame,
 		/obj/item/spellbook/oneuse/mime,
 		/obj/item/spellbook/oneuse/mime/fingergun,
 		/obj/item/spellbook/oneuse/mime/greaterwall,
