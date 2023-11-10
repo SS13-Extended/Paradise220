@@ -173,7 +173,8 @@
 		"Basic" = "Robot-STD",
 		"Android" = "droid",
 		"Default" = "Standard",
-		"Noble-STD" = "Noble-STD"
+		"Noble-STD" = "Noble-STD",
+		"Maid" = "maid-Standart"
 	)
 	has_transform_animation = TRUE
 
@@ -234,7 +235,8 @@
 		"Advanced Droid" = "droid-medical",
 		"Needles" = "Robot-SRG",
 		"Noble-MED" = "Noble-MED",
-		"Cricket" = "Cricket-MEDI"
+		"Cricket" = "Cricket-MEDI",
+		"Maid" = "maid-Medical"
 	)
 	has_transform_animation = TRUE
 
@@ -298,7 +300,8 @@
 		"Сhiefmate" = "chiefmate",
 		"Standard" = "Standard-Engi",
 		"Noble-ENG" = "Noble-ENG",
-		"Cricket" = "Cricket-ENGI"
+		"Cricket" = "Cricket-ENGI",
+		"Maid" = "maid-Engineering"
 	)
 	has_transform_animation = TRUE
 
@@ -351,7 +354,8 @@
 		"Bloodhound" = "bloodhound",
 		"Standard" = "Standard-Secy",
 		"Noble-SEC" = "Noble-SEC",
-		"Cricket" = "Cricket-SEC"
+		"Cricket" = "Cricket-SEC",
+		"Maid" = "maid-Security"
 	)
 	has_transform_animation = TRUE
 
@@ -380,7 +384,8 @@
 		"Mop Gear Rex" = "mopgearrex",
 		"Standard" = "Standard-Jani",
 		"Noble-CLN" = "Noble-CLN",
-		"Cricket" = "Cricket-JANI"
+		"Cricket" = "Cricket-JANI",
+		"Maid" = "maid-Janitor"
 	)
 	has_transform_animation = TRUE
 
@@ -414,7 +419,8 @@
 		"Default" = "Robot-MAN",
 		"Standard" = "Standard-Serv",
 		"Noble-SRV" = "Noble-SRV",
-		"Cricket" = "Cricket-SERV"
+		"Cricket" = "Cricket-SERV",
+		"Maid" = "maid-Service"
 	)
 	has_transform_animation = TRUE
 
@@ -502,7 +508,8 @@
 		"Standard" = "Standard-Mine",
 		"Noble-DIG" = "Noble-DIG",
 		"Cricket" = "Cricket-MINE",
-		"Lavaland" = "lavaland"
+		"Lavaland" = "lavaland",
+		"Maid" = "maid-Miner"
 	)
 	has_transform_animation = TRUE
 
