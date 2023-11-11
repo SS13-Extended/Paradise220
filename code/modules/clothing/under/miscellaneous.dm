@@ -955,3 +955,11 @@
 	icon_state = "tourist"
 	icon_state = "tourist"
 	item_color = "tourist"
+
+/obj/item/clothing/under/new_maid
+	name = "Sexy maid costume"
+	desc = "Maid's dress. Be careful not to stain it."
+	icon_state = "new_maid"
+	item_state = "new_maid"
+	item_color = "new_maid"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO

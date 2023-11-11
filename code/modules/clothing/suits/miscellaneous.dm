@@ -1346,3 +1346,27 @@
 		"Grey" = 'icons/mob/clothing/species/grey/suit.dmi',
 		"Monkey" = 'icons/mob/clothing/species/monkey/suit.dmi',
 	)
+
+//FanTik-start
+/obj/item/clothing/suit/blackcloak
+	name = "Black сloak"
+	desc = "A long leather raincoat. It makes you feel like a human being."
+	icon_state = "blackcloak"
+	item_state = "blackcloak"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/suit/plaidhoodie_yellow
+	name = "Yellow plaid shirt"
+	desc = "Fashionable and stylish yellow plaid shirt with hood."
+	icon_state = "plaidhoodie_yellow"
+	item_state = "plaidhoodie_yellow"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+
+/obj/item/clothing/suit/plaidhoodie_white
+	name = "White plaid shirt"
+	desc = "Fashionable and stylish white plaid shirt with hood."
+	icon_state = "plaidhoodie_white"
+	item_state = "plaidhoodie_white"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+//FantTik-end
+
