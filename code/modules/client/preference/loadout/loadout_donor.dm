@@ -98,3 +98,23 @@
 	path = /obj/item/id_decal/gold
 	// donator_tier = 4
 	cost = 4
+
+/datum/gear/donor/blackcloak
+	display_name = "Black Cloak"
+	path = /obj/item/clothing/suit/blackcloak
+	cost = 2
+
+/datum/gear/donor/plaidhoodie_yellow
+	display_name = "Yellow plaid shirt"
+	path = /obj/item/clothing/suit/plaidhoodie_yellow
+	cost = 1
+
+/datum/gear/donor/plaidhoodie_white
+	display_name = "White plaid shirt"
+	path = /obj/item/clothing/suit/plaidhoodie_white
+	cost = 1
+
+/datum/gear/donor/new_maid
+	display_name = "Maid costume"
+	path = /obj/item/clothing/under/new_maid
+	cost = 1

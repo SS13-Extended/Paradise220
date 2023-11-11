@@ -955,3 +955,15 @@
 	icon_state = "tourist"
 	icon_state = "tourist"
 	item_color = "tourist"
+
+/obj/item/clothing/under/new_maid
+	name = "Sexy maid costume"
+	desc = "Sexy maid."
+	icon_state = "new_maid"
+	item_state = "new_maid"
+	item_color = "new_maid"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/uniform.dmi',
+		"Monkey" = 'icons/mob/clothing/species/monkey/uniform.dmi'
+		)
