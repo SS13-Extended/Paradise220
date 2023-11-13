@@ -116,6 +116,22 @@
 					modmsg += " (АФК)"
 				modmsg += "\n"
 				num_mods_online++
+			else
+				msg += "\[[C.holder.rank]\]  \t[C]"
+
+				if(C.holder.fakekey)
+					msg += " <i>(как [C.holder.fakekey])</i>"
+
+				if(isobserver(C.mob))
+					msg += " - Наблюдает"
+				else if(isnewplayer(C.mob))
+					msg += " - В Лобби"
+				else
+					msg += " - Играет"
+
+				if(C.is_afk())
+					msg += " (АФК)"
+				msg += "\n"
 	else
 		for(var/client/C in GLOB.admins)
 
@@ -126,10 +142,13 @@
 			else if(check_rights(R_MOD|R_MENTOR, 0, C.mob) && !check_rights(R_ADMIN, 0, C.mob))
 				modmsg += "\[[C.holder.rank]\]  \t[C]\n"
 				num_mods_online++
+			else if(!C.holder.fakekey)
+				msg += "\[[C.holder.rank]\]  \t[C]\n"
 
 	var/noadmins_info = "\n<span class='notice'><small>Если никого из админсостава нет онлайн, все равно создавайте тикеты. Админхэлпы и менторхэлпы будут перенаправлены в дискорд!<small></span>"
 	msg = "<b>Онлайн Админов ([num_admins_online]):</b>\n" + msg + "\n<b>Онлайн Менторов/Модераторов ([num_mods_online]):</b>\n" + modmsg + noadmins_info
 	msg = replacetext(msg, "\[Хост\]",	"\[<font color='#1ABC9C'>Хост</font>\]")
+	msg = replacetext(msg, "\[Хвост\]",	"\[<font color='#D4839E'>Хвост</font>\]")
 	msg = replacetext(msg, "\[Старший Админ\]",	"\[<font color='#f02f2f'>Старший Админ</font>\]")
 	msg = replacetext(msg, "\[Админ\]",	"\[<font color='#ee8f29'>Админ</font>\]")
 	msg = replacetext(msg, "\[Триал Админ\]",	"\[<font color='#cfc000'>Триал Админ</font>\]")
