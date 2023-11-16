@@ -397,10 +397,11 @@ SUBSYSTEM_DEF(timer)
 	var/bucket_joined = FALSE
 	/// Initial bucket position
 	var/bucket_pos = -1
+	/// Always incrementing timer ID for the next timer
+	var/static/nextid = 1
 
 
 /datum/timedevent/New(datum/callback/callBack, wait, flags, datum/controller/subsystem/timer/timer_subsystem, hash, source)
-	var/static/nextid = 1
 	id = TIMER_ID_NULL
 	src.callBack = callBack
 	src.wait = wait
@@ -420,7 +421,7 @@ SUBSYSTEM_DEF(timer)
 	if (flags & TIMER_STOPPABLE)
 		id = num2text(nextid, 100)
 		if (nextid >= SHORT_REAL_LIMIT)
-			nextid += min(1, 2 ** round(nextid / SHORT_REAL_LIMIT))
+			nextid = min(1, 2 ** round(nextid / SHORT_REAL_LIMIT))
 		else
 			nextid++
 		timer_subsystem.timer_id_dict[id] = src
