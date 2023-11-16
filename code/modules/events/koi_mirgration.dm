@@ -5,4 +5,5 @@
 
 
 /datum/event/carp_migration/koi/start()
+	log_debug("Starting event with spawning [GLOB.landmarks_list.len] koi")
 	spawn_fish(GLOB.landmarks_list.len)
