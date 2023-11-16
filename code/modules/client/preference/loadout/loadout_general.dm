@@ -85,10 +85,22 @@
 	display_name = "Grey Plushie"
 	path = /obj/item/toy/plushie/greyplushie
 
-/datum/gear/akulaplushie
-	display_name = "Akula Plushie"
-	path = /obj/item/toy/plushie/blahaj/twohanded
-	cost = 2
+/datum/gear/slimeplushie
+	display_name = "Slime Plushie"
+	path = /obj/item/toy/plushie/slimeplushie
+
+/datum/gear/axolotlplushie
+	display_name = "Axolotl Plushie"
+	path = /obj/item/toy/plushie/axolotlplushie
+
+/datum/gear/foxplushie
+	display_name = "Cute Fox Plushie"
+	path = /obj/item/toy/plushie/foxplushie
+
+// /datum/gear/akulaplushie
+// 	display_name = "Akula Plushie"
+// 	path = /obj/item/toy/plushie/blahaj/twohanded
+// 	cost = 2
 
 /datum/gear/sechud
 	display_name = "a classic security HUD"
