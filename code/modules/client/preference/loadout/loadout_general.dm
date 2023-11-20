@@ -97,10 +97,20 @@
 	display_name = "Cute Fox Plushie"
 	path = /obj/item/toy/plushie/foxplushie
 
-// /datum/gear/akulaplushie
-// 	display_name = "Akula Plushie"
-// 	path = /obj/item/toy/plushie/blahaj/twohanded
-// 	cost = 2
+/datum/gear/plasmamanplushie
+	display_name = "Plasmaman Plushie"
+	path = /obj/item/toy/plushie/plasmamanplushie
+
+/datum/gear/shardplushie
+	display_name = "Shard Plushie"
+	path = /obj/item/toy/plushie/shardplushie
+
+/*
+/datum/gear/akulaplushie
+	display_name = "Akula Plushie"
+	path = /obj/item/toy/plushie/blahaj/twohanded
+	cost = 2
+*/
 
 /datum/gear/sechud
 	display_name = "a classic security HUD"
