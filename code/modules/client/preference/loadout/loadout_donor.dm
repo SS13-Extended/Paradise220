@@ -114,6 +114,16 @@
 	path = /obj/item/clothing/suit/plaidhoodie_white
 	cost = 1
 
+/datum/gear/donor/plaidhoodie_green
+	display_name = "Green plaid shirt"
+	path = /obj/item/clothing/suit/plaidhoodie_green
+	cost = 1
+
+/datum/gear/donor/plaidhoodie_red
+	display_name = "Red plaid shirt"
+	path = /obj/item/clothing/suit/plaidhoodie_red
+	cost = 1
+
 /datum/gear/donor/new_maid
 	display_name = "Maid costume"
 	path = /obj/item/clothing/under/new_maid

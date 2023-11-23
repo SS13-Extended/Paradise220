@@ -1380,3 +1380,25 @@
 		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi',
 		"Monkey" = 'icons/mob/clothing/species/monkey/suit.dmi'
 		)
+
+/obj/item/clothing/suit/plaidhoodie_green
+	name = "Green plaid shirt"
+	desc = "Fashionable and stylish green plaid shirt with hood."
+	icon_state = "plaidhoodie_green"
+	item_state = "plaidhoodie_green"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi',
+		"Monkey" = 'icons/mob/clothing/species/monkey/suit.dmi'
+		)
+
+/obj/item/clothing/suit/plaidhoodie_red
+	name = "Red plaid shirt"
+	desc = "Fashionable and stylish red plaid shirt with hood."
+	icon_state = "plaidhoodie_red"
+	item_state = "plaidhoodie_red"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi',
+		"Monkey" = 'icons/mob/clothing/species/monkey/suit.dmi'
+		)
