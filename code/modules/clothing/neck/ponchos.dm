@@ -29,6 +29,7 @@
 	desc = "Forced to live on your shameful acting as a fake Mexican, you and your poncho have grown inseperable. Literally."
 	icon_state = "ponchoshame"
 	flags = NODROP
+	dyeable = FALSE
 
 /obj/item/clothing/neck/poncho/security
 	name = "corporate poncho"
@@ -39,3 +40,6 @@
 	name = "tactical poncho"
 	desc = "A short and black poncho for some tactical operations in hot areas of space"
 	icon_state = "tacticalponcho"
+	item_color = "tactical"
+	sprite_sheets = list()
+	dyeable = FALSE
