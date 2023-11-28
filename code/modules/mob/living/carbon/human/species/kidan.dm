@@ -61,7 +61,7 @@
 
 	speech_sounds = list('sound/voice/kidan/speak1.ogg', 'sound/voice/kidan/speak2.ogg', 'sound/voice/kidan/speak3.ogg' )
 	speech_chance = 35
-	scream_verb = "визжит"
+	scream_verb = "визж%(ит,ат)%"
 	female_giggle_sound = list('sound/voice/kidan/giggles1.ogg', 'sound/voice/kidan/giggles2.ogg')
 	male_giggle_sound = list('sound/voice/kidan/giggles1.ogg', 'sound/voice/kidan/giggles2.ogg')
 	male_scream_sound = list('sound/voice/kidan/scream1.ogg', 'sound/voice/kidan/scream2.ogg', 'sound/voice/kidan/scream3.ogg')
@@ -98,7 +98,7 @@
 	H.verbs |= /mob/living/carbon/human/proc/emote_click
 	H.verbs |= /mob/living/carbon/human/proc/emote_clack
 	H.verbs |= /mob/living/carbon/human/proc/emote_wiggle
-	H.verbs |= /mob/living/carbon/human/proc/emote_waves_antennae
+	H.verbs |= /mob/living/carbon/human/proc/emote_wave_k
 	H.verbs -= /mob/living/carbon/human/verb/emote_pale
 	H.verbs -= /mob/living/carbon/human/verb/emote_blink
 	H.verbs -= /mob/living/carbon/human/verb/emote_blink_r
@@ -117,7 +117,7 @@
 	H.verbs -= /mob/living/carbon/human/proc/emote_click
 	H.verbs -= /mob/living/carbon/human/proc/emote_clack
 	H.verbs -= /mob/living/carbon/human/proc/emote_wiggle
-	H.verbs -= /mob/living/carbon/human/proc/emote_waves_antennae
+	H.verbs -= /mob/living/carbon/human/proc/emote_wave_k
 	H.verbs |= /mob/living/carbon/human/verb/emote_pale
 	H.verbs |= /mob/living/carbon/human/verb/emote_blink
 	H.verbs |= /mob/living/carbon/human/verb/emote_blink_r
