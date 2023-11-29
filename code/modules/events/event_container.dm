@@ -225,6 +225,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ревенант", 				/datum/event/revenant, 					0,      list(ASSIGNMENT_ANY = 60),      FALSE, 0, 150),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Спавн свармеров", 			/datum/event/spawn_swarmer, 			0, 	is_one_shot = TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Спавн морфа", 				/datum/event/spawn_morph, 				0,		list(ASSIGNMENT_SECURITY = 10), TRUE, 0, 30),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Pulse Demon Infiltration",	/datum/event/spawn_pulsedemon,			0,		list(ASSIGNMENT_ENGINEER = 10), is_one_shot = TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Вспышка болезни",			/datum/event/disease_outbreak, 			0,		list(ASSIGNMENT_MEDICAL = 150), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Хедкрабы",					/datum/event/headcrabs, 				0,		list(ASSIGNMENT_SECURITY = 20), FALSE, 0, 100),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Сбой работы дверей",		/datum/event/door_runtime,				0,		list(ASSIGNMENT_ENGINEER = 25, ASSIGNMENT_AI = 150), TRUE, 0, 300),
