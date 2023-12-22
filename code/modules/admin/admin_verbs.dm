@@ -128,7 +128,6 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/datum/admins/proc/restart,
 	/datum/admins/proc/end_round,
 	/datum/admins/proc/delay,
-	/datum/admins/proc/reload_emoji,
 	/datum/admins/proc/toggleaban,
 	/datum/admins/proc/toggleenter,		/*toggles whether people can join the current game*/
 	/datum/admins/proc/toggleguests,	/*toggles whether guests can join the current game*/
