@@ -715,13 +715,6 @@
 	item = /obj/item/twohanded/chainsaw
 	cost = 60
 
-/datum/uplink_item/dangerous/commando_kit
-	name = "Commandos knife operation kit"
-	desc = "A box that smells like a mix of gunpowder, napalm and cheap whiskey.  Contains everything you need to survive in such places."
-	item = /obj/item/storage/box/syndie_kit/commando_kit
-	cost = 35
-	excludefrom = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
-
 // SUPPORT AND MECHAS
 
 /datum/uplink_item/support
@@ -1052,13 +1045,6 @@
 	item = /obj/item/ammo_casing/caseless/rocket/hedp
 	cost = 30
 	uplinktypes = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
-
-/datum/uplink_item/ammo/knives_kit
-	name = "Throwing knives kit"
-	desc = "A box containing 7 throwing knives"
-	item = /obj/item/storage/box/syndie_kit/knives_kit
-	cost = 5
-	excludefrom = list(UPLINK_TYPE_NUCLEAR, UPLINK_TYPE_SST)
 
 // STEALTHY WEAPONS
 
