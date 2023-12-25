@@ -37,7 +37,6 @@
 	spawn_locations = shuffle(spawn_locations)
 	num_groups = min(num_groups, spawn_locations.len)
 
-	log_debug("Spawning [num_groups] groups of [group_size_min]-[group_size_max] fish")
 	var/i = 1
 	while(i <= num_groups)
 		var/group_size = rand(group_size_min, group_size_max)
