@@ -181,7 +181,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Обычные новости",       /datum/event/mundane_news,              0,  list(ASSIGNMENT_ANY = 100),  FALSE,   0,  300),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Нашествие вредителей",  /datum/event/infestation,               0,  list(ASSIGNMENT_JANITOR = 200)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Стенной грибок",        /datum/event/wallrot,                   0,  list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_GARDENER = 50)),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скопление кои",         /datum/event/carp_migration/koi,		0,  list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_SECURITY = 50), 0, 100),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Скопление кои",         /datum/event/carp_migration/koi,		0,  list(ASSIGNMENT_ENGINEER = 30, ASSIGNMENT_SECURITY = 50), FALSE, 0, 100),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Аппендицит",            /datum/event/spontaneous_appendicitis, 	0,  list(ASSIGNMENT_MEDICAL = 10), TRUE),
 	)
 #undef MUNDANE_NOTHING
