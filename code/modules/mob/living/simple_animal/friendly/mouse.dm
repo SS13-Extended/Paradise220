@@ -273,11 +273,11 @@
 	message = "умыва%(ет,ют)%ся!"
 	anim_type = WASHUP
 
-/datum/emote/living/simple_animal/mouse/idle/washup
-	key = "mass"
-	key_third_person = "mass"
+/datum/emote/living/simple_animal/mouse/idle/ass
+	key = "ass"
+	key_third_person = "ass"
 	message = "издевается"
-	anim_type = WASHUP
+	anim_type = ASS
 
 /*
  * Mouse types
